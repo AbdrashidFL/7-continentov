@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>7 - Континентов</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="slick/slick.css" />
+	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+	<link rel="stylesheet" href="css/main.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="shortcut icon" href="img/logo.png">
+</head>
+<body>
+	<!-- <div id="prel" class="preloader">
+		<div class="loader"></div>
+	</div> -->
+	<header class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-3">
+					<div class="header-logo">
+						<a href="#">
+							<img class="header-logo__img" src="img/logo.png" alt="Лого">
+							<div class="header-logo__text hidden-mobile">Лучшие детские<br> курорты и маршруты</div>
+						</a>
+					</div>
+					<!-- header-logo -->
+				</div>
+				<div class="col-lg-6 col-9">
+					<div class="header-contact">
+						<div class="header-contact__text">
+							Есть вопросы? - звоните<br>
+							<div class="header-contact__text-o">+7 (8182) 20-80-10<br>+7 (960) 002-80-10</div>
+						</div>
+						<button class="header-contact__button button"><p class="hidden-mobile">Обратный звонок</p><img class="hidden-mobile" src="img/header/phone.png" alt="Телефон"></button>
+					</div>
+				</div>
+				<div class="col-lg-6 col-12">
+					<div class="header-text">
+						<div class="header-text__title">Детский отдых</div>
+						<div class="header-text__subtitle">Путевки в лучшие лагеря<br>по ценам ниже рынка 20%</div>
+						<div class="header-text__blocks">
+							<div class="header-text__block">
+								<div class="block-img"><img src="img/header/shield.png" alt="Щит"></div>
+								<div class="block-text">
+									<div class="block-text__title">Мы сотрудничаем только с лицензированными лагерями, прошедшими проверку контролирующими органами
+										<div class="block-text__subtitle">Наши дети в безопасности</div>
+									</div>
+								</div>
+							</div>
+							<div class="header-text__block">
+								<div class="block-img"><img src="img/header/wallet.png" alt="Деньги"></div>
+								<div class="block-text">
+									<div class="block-text__title">Путевки частично оплачиваются из бюджета
+										<div class="block-text__subtitle">Вся информация и документы в офисе</div>
+									</div>
+								</div>
+							</div>
+							<div class="header-text__block">
+								<div class="block-img"><img src="img/header/girl.png" alt="Девушка"></div>
+								<div class="block-text">
+									<div class="block-text__title">Профессиональные вожатые и педагоги
+										с опытом работы в лагерях от 3 до 30 лет
+										<div class="block-text__subtitle">Во время отдыха педагоги всегда на связи</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- header-text -->
+				</div>
+			</div>
+			<!-- row -->
+		</div>
+		<!-- container -->
+	</header>
+	<!-- header -->
+	<div class="callback">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-10 col-12">
+					<div class="callback-title">Мы готовы дать Вам подробную консультацию<br><span>Поможем правильно подобрать путевку для Вашего ребенка под любой бюджет!</span></div>
+					<form class="callbackform" action="mailer/smart1.php" method="POST">
+						<div class="callbackform-title">Для этого заполните форму ниже - мы перезвоним Вам за 60 секунд</div>
+						<div class="callbackform-input">
+							<input class="callbackform-input__name" name="user_name"type="text" placeholder="Ваше имя">
+							<input class="callbackform-input__number mask" name="user_phone"type="text" placeholder="Ваш телефон">
+							<button class="callbackform-input__button button">Получить консультацию</button>
+						</div>
+						<div class="callbackform-text">
+							<div class="callbackform-text__phone">или перезвоните нам по телефону:</div>
+							<div class="callbackform-text__number"><img src="img/callback/phone.png" alt="Телефон">+7 (8182) 20-80-10</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<!-- row -->
+		</div>
+		<!-- container -->
+	</div>
+	<!-- callback -->
+	<div class="vouchers">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-12">
+					<div class="vouchers-title">Выберите путевку в лучшие лагеря страны</div>
+					<div class="vouchers-subtitle">Каталог путевок с ценами:</div>
+					<div class="vouchers-button hidden-mobile">
+						<button class="vouchers-button__arkhangelsk">Детский отдых в Арх-кой области</button>
+						<button class="vouchers-button__russian">Детский отдых по России</button>
+						<button class="vouchers-button__abroad">Детский отдых за Рубежом</button>
+					</div>
+					<div class="vouchers-button vouchers-mobile">
+						<button class="vouchers-button__arkhangelskmobile">Детский отдых в Арх-кой
+							области</button>
+						<button class="vouchers-button__russianmobile">Детский отдых по России</button>
+						<button class="vouchers-button__abroadmobile">Детский отдых за Рубежом</button>
+					</div>
+					<div class="vouchers-sections vouchers-arkhangelsk">
+						<div class="vouchers-block">
+							<div class="vouchers-block__region">
+								<div class="region-block">
+									<div class="region-block__img">
+										<img class="region-block__children" src="img/vouchers/childrens-1.jpg" alt="Дети">
+										<div class="region-text">
+											<div class="vouchers-block__text vouchers-block__map"><img src="img/vouchers/map.png" alt="Гео">Архангельское об-сть</div>
+											<div class="vouchers-block__text vouchers-block__avatar"><img src="img/vouchers/avatar.png" alt="Аватар">от 7 до 17 лет</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="vouchers-block__title">ДОЛ «Ватса-Парк»</div>
+							<div class="vouchers-block__subtitle">(Котласский район, Архангельская область)</div>
+							<div class="vouchers-block__link"><a href="#">Подробнее</a></div>
+						</div>
+						<div class="vouchers-block">
+							<div class="vouchers-block__region">
+								<div class="region-block">
+									<div class="region-block__img">
+										<img class="region-block__children" src="img/vouchers/childrens-1.jpg" alt="Дети">
+										<div class="region-text">
+											<div class="vouchers-block__text vouchers-block__map"><img src="img/vouchers/map.png" alt="Гео">Архангельское об-сть
+											</div>
+											<div class="vouchers-block__text vouchers-block__avatar"><img src="img/vouchers/avatar.png" alt="Аватар">от 7 до 17
+												лет</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="vouchers-block__title">ДОЛ «Ватса-Парк»</div>
+							<div class="vouchers-block__subtitle">(Котласский район, Архангельская область)</div>
+							<div class="vouchers-block__link"><a href="#">Подробнее</a></div>
+						</div>
+						<div class="vouchers-block">
+							<div class="vouchers-block__region">
+								<div class="region-block">
+									<div class="region-block__img">
+										<img class="region-block__children" src="img/vouchers/childrens-1.jpg" alt="Дети">
+										<div class="region-text">
+											<div class="vouchers-block__text vouchers-block__map"><img src="img/vouchers/map.png" alt="Гео">Архангельское об-сть
+											</div>
+											<div class="vouchers-block__text vouchers-block__avatar"><img src="img/vouchers/avatar.png" alt="Аватар">от 7 до 17
+												лет</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="vouchers-block__title">ДОЛ «Ватса-Парк»</div>
+							<div class="vouchers-block__subtitle">(Котласский район, Архангельская область)</div>
+							<div class="vouchers-block__link"><a href="#">Подробнее</a></div>
+						</div>
+					</div>
+					<!-- vouchers-arkhangelsk  -->
+					<div class="vouchers-sections vouchers-russian">
+						<div class="vouchers-block">
+							<div class="vouchers-block__region">
+								<div class="region-block">
+									<div class="region-block__img">
+										<img class="region-block__children" src="img/vouchers/childrens-2.jpg" alt="Дети">
+										<div class="region-text">
+											<div class="vouchers-block__text vouchers-block__map"><img src="img/vouchers/map.png" alt="Гео">Архангельское об-сть
+											</div>
+											<div class="vouchers-block__text vouchers-block__avatar"><img src="img/vouchers/avatar.png" alt="Аватар">от 7 до 17
+												лет</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="vouchers-block__title">ДОЛ «Ватса-Парк»</div>
+							<div class="vouchers-block__subtitle">(Котласский район, Архангельская область)</div>
+							<div class="vouchers-block__link"><a href="#">Подробнее</a></div>
+						</div>
+						<div class="vouchers-block">
+							<div class="vouchers-block__region">
+								<div class="region-block">
+									<div class="region-block__img">
+										<img class="region-block__children" src="img/vouchers/childrens-2.jpg" alt="Дети">
+									<div class="region-text">
+										<div class="vouchers-block__text vouchers-block__map"><img src="img/vouchers/map.png" alt="Гео">Архангельское об-сть
+										</div>
+										<div class="vouchers-block__text vouchers-block__avatar"><img src="img/vouchers/avatar.png" alt="Аватар">от 7 до 17
+											лет</div>
+									</div>
+									</div>
+								</div>
+							</div>
+							<div class="vouchers-block__title">ДОЛ «Ватса-Парк»</div>
+							<div class="vouchers-block__subtitle">(Котласский район, Архангельская область)</div>
+							<div class="vouchers-block__link"><a href="#">Подробнее</a></div>
+						</div>
+						<div class="vouchers-block">
+							<div class="vouchers-block__region">
+								<div class="region-block">
+									<div class="region-block__img">
+										<img class="region-block__children" src="img/vouchers/childrens-2.jpg" alt="Дети">
+										<div class="region-text">
+											<div class="vouchers-block__text vouchers-block__map"><img src="img/vouchers/map.png" alt="Гео">Архангельское об-сть
+											</div>
+											<div class="vouchers-block__text vouchers-block__avatar"><img src="img/vouchers/avatar.png" alt="Аватар">от 7 до 17
+												лет</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="vouchers-block__title">ДОЛ «Ватса-Парк»</div>
+							<div class="vouchers-block__subtitle">(Котласский район, Архангельская область)</div>
+							<div class="vouchers-block__link"><a href="#">Подробнее</a></div>
+						</div>
+					</div>
+					<!-- vouchers-russian -->
+					<div class="vouchers-sections vouchers-abroad">
+						<div class="vouchers-block">
+							<div class="vouchers-block__region">
+								<div class="region-block">
+									<div class="region-block__img">
+										<img class="region-block__children" src="img/vouchers/childrens-3.jpg" alt="Дети">
+										<div class="region-text">
+											<div class="vouchers-block__text vouchers-block__map"><img src="img/vouchers/map.png" alt="Гео">Архангельское об-сть
+											</div>
+											<div class="vouchers-block__text vouchers-block__avatar"><img src="img/vouchers/avatar.png" alt="Аватар">от 7 до 17
+												лет</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="vouchers-block__title">ДОЛ «Ватса-Парк»</div>
+							<div class="vouchers-block__subtitle">(Котласский район, Архангельская область)</div>
+							<div class="vouchers-block__link"><a href="#">Подробнее</a></div>
+						</div>
+						<div class="vouchers-block">
+							<div class="vouchers-block__region">
+								<div class="region-block">
+									<div class="region-block__img">
+										<img class="region-block__children" src="img/vouchers/childrens-3.jpg" alt="Дети">
+										<div class="region-text">
+											<div class="vouchers-block__text vouchers-block__map"><img src="img/vouchers/map.png" alt="Гео">Архангельское об-сть
+											</div>
+											<div class="vouchers-block__text vouchers-block__avatar"><img src="img/vouchers/avatar.png" alt="Аватар">от 7 до 17
+												лет</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="vouchers-block__title">ДОЛ «Ватса-Парк»</div>
+							<div class="vouchers-block__subtitle">(Котласский район, Архангельская область)</div>
+							<div class="vouchers-block__link"><a href="#">Подробнее</a></div>
+						</div>
+						<div class="vouchers-block">
+							<div class="vouchers-block__region">
+								<div class="region-block">
+									<div class="region-block__img">
+										<img class="region-block__children" src="img/vouchers/childrens-3.jpg" alt="Дети">
+										<div class="region-text">
+											<div class="vouchers-block__text vouchers-block__map"><img src="img/vouchers/map.png" alt="Гео">Архангельское об-сть
+											</div>
+											<div class="vouchers-block__text vouchers-block__avatar"><img src="img/vouchers/avatar.png" alt="Аватар">от 7 до 17
+												лет</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="vouchers-block__title">ДОЛ «Ватса-Парк»</div>
+							<div class="vouchers-block__subtitle">(Котласский район, Архангельская область)</div>
+							<div class="vouchers-block__link"><a href="#">Подробнее</a></div>
+						</div>
+					</div>
+					<!-- vouchers-abroad -->
+				</div>
+				<!-- col-lg-12 -->
+			</div>
+			<!-- row -->
+		</div>
+		<!-- container -->
+	</div>
+	<!-- vouchers -->
+	<div class="stock">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="stock-title">Специальное предложение - успевайте забронировать!</div>
+					<div class="stock-subtitle">Путевка в детский оздоровительный лагерь "Лазуревый берег"<br>на 18 дней всего <span>за 25
+							800 рублей!</span></div>
+					<div class="stock-slider">
+						<div class="stock-slider__block"><img src="img/stock/children-1.jpg" alt="Ребенок"></div>
+						<div class="stock-slider__block"><img src="img/stock/children-2.jpg" alt="Ребенок"></div>
+						<div class="stock-slider__block"><img src="img/stock/children-3.jpg" alt="Ребенок"></div>
+						<div class="stock-slider__block"><img src="img/stock/children-4.jpg" alt="Ребенок"></div>
+						<div class="stock-slider__block"><img src="img/stock/children-1.jpg" alt="Ребенок"></div>
+						<div class="stock-slider__block"><img src="img/stock/children-2.jpg" alt="Ребенок"></div>
+						<div class="stock-slider__block"><img src="img/stock/children-3.jpg" alt="Ребенок"></div>
+						<div class="stock-slider__block"><img src="img/stock/children-4.jpg" alt="Ребенок"></div>
+					</div>
+				</div>
+			</div>
+			<!-- row -->
+			<div class="row">
+				<div class="col-lg-4 col-12">
+					<div class="stock-advan">
+						<img src="img/stock/sea.png" alt="Море">
+						<p>Первая береговая линия -<br>50 метров до моря</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-12">
+					<div class="stock-advan">
+						<img src="img/stock/bed.png" alt="Кровать">
+						<p>Размещение: все номера<br>трехместные</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-12">
+					<div class="stock-advan">
+						<img src="img/stock/balcony.png" alt="Балкон">
+						<p>В номере все удобства,<br>есть лоджии</p>
+					</div>
+				</div>
+			</div>
+			<!-- row -->
+			<div class="row">
+				<div class="col-lg-12 col-12">
+					<div class="stockcallback">
+						<div class="stockcallback-title">Получите полную информацию о путевке от наших специалистов</div>
+						<form class="callbackform" action="mailer/smart1.php" method="POST">
+							<div class="callbackform-title">Для этого заполните форму ниже - мы перезвоним Вам за 60 секунд</div>
+							<div class="callbackform-input">
+								<input class="callbackform-input__name" name="user_name"type="text" placeholder="Ваше имя">
+								<input class="callbackform-input__number mask" name="user_phone"type="text" placeholder="Ваш телефон">
+								<button class="callbackform-input__button button">Получить консультацию</button>
+							</div>
+							<div class="callbackform-text">
+								<div class="callbackform-text__phone">или перезвоните нам по телефону:</div>
+								<div class="callbackform-text__number"><img src="img/callback/phone.png" alt="Телефон">+7 (8182) 20-80-10</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- container -->
+	</div>
+	<!-- stock -->
+	<div class="social">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="social-img hidden-mobile"><img src="img/social/bg.png" alt="Документ"></div>
+				</div>
+				<div class="col-lg-6 col-12">
+					<div class="social-title">Все граждане РФ, отдыхающие в детских лагерях,имеют право на социальную поддержку государством</div>
+					<div class="social-desc">Право ребенка на частичную оплату путевки<br>подтверждается сертификатом, выдаваемым<br>в органах местного самоуправления</div>
+					<div class="social-subtitle">Мы поможем Вам реализовать<br>эту возможность!</div>
+					<div class="social-text">Все документы оформляются у нас в офисе</div>
+				</div>
+				<div class="col-lg-12 col-12">
+					<div class="socialcallback">
+						<div class="socialcallback-title">Не упустите возможность сэкономить до 16 800 рублей на путевке для Вашего ребенка</div>
+						<form class="callbackform" action="mailer/smart1.php" method="POST">
+							<div class="callbackform-title">Узнайте как получить сертификат на соцподдержку<br>Для этого заполните форму ниже - мы перезвоним Вам для консультации</div>
+							<div class="callbackform-input">
+								<input class="callbackform-input__name" name="user_name" type="text" placeholder="Ваше имя">
+								<input class="callbackform-input__number mask" name="user_phone" type="text" placeholder="Ваш телефон">
+								<button class="callbackform-input__button button">Получить консультацию</button>
+							</div>
+							<div class="callbackform-text">
+								<div class="callbackform-text__phone">или перезвоните нам по телефону:</div>
+								<div class="callbackform-text__number"><img src="img/callback/phone.png" alt="Телефон">+7 (8182) 20-80-10
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- row -->
+		</div>
+		<!-- container -->
+	</div>
+	<!-- social -->
+	<div class="features">
+		<div class="features-title">В лагерях, с которыми мы сотрудничаем, обеспечены все условия для комфортного пребывания детей</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-12">
+					<div class="features-block">
+						<img src="img/features/phone.png" alt="Телефон">
+						<div class="features-block__text">
+							<p class="features-block__title">На связи в любой момент</p>
+							<p class="features-block__subtitle">24 часа/сут на связи педагог, сопровождающий ребенка. Еще до поездки Вы можете познакомиться с ним и обсудитьособенности Вашего ребенка.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-12">
+					<div class="features-block">
+						<img src="img/features/dish.png" alt="Блюдечко">
+						<div class="features-block__text">
+							<p class="features-block__title">5-разовое питание</p>
+							<p class="features-block__subtitle">Завтрак, обед, полдник, ужин, сонник Разнообразное полноценное питание от опытных поваров</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-12">
+					<div class="features-block">
+						<img src="img/features/video.png" alt="Видеонаблюдение">
+						<div class="features-block__text">
+							<p class="features-block__title">Огражденная территория вечером освещена</p>
+							<p class="features-block__subtitle">2Видеонаблюдение 24 часа/сут. Пропускной контроль</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-12">
+					<div class="features-block">
+						<img src="img/features/sun-umbrella.png" alt="Зонтик">
+						<div class="features-block__text">
+							<p class="features-block__title">Собственные пляжи</p>
+							<p class="features-block__subtitle">Чистые песчаные или галечные пляжи Дежурная спасательная группа на каждом пляже</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-12">
+					<div class="features-block">
+						<img src="img/features/football.png" alt="Футбол">
+						<div class="features-block__text">
+							<p class="features-block__title">Спортивные площадки на территории</p>
+							<p class="features-block__subtitle">В каждом лагере предусмотрены специальнооборудованные площадки для активных игр детей</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-12">
+					<div class="features-block">
+						<img src="img/features/build.png" alt="Строение">
+						<div class="features-block__text">
+							<p class="features-block__title">Современные оборудованные корпуса</p>
+							<p class="features-block__subtitle">Свежий ремонт в комнатах</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- row -->
+		</div>
+		<!-- container -->
+	</div>
+	<!-- features -->
+	<div class="market">
+		<div class="market-title">Компания "Семь Континентов" - мы работаем с 2006 года на рынке туристических услуг</div>
+		<div class="market-subtitle">Более 11 лет в сфере организации детского отдыха</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-12"><div class="market-img"><img src="img/market/women-bigphoto.jpg" alt="Девушка"></div></div>
+				<div class="col-lg-6 col-12">
+					<div class="market-desc">
+						<div class="market-desc__name">Елена Вячеславовна Траберг</div>
+						<div class="market-desc__spec">директор компании "7 континентов"</div>
+						<div class="market-desc__exp">
+							<div class="market-desc__expwork">
+								<img src="img/market/tick.png" alt="Галочка">
+								<p>Опыт работы</p>
+							</div>
+							<div class="market-desc__expwork">
+								<img src="img/market/tick.png" alt="Галочка">
+								<p>Опыт работы</p>
+							</div>
+							<div class="market-desc__expwork">
+								<img src="img/market/tick.png" alt="Галочка">
+								<p>Опыт работы</p>
+							</div>
+							<div class="market-desc__expwork">
+								<img src="img/market/tick.png" alt="Галочка">
+								<p>Опыт работы</p>
+							</div>
+							<div class="market-desc__expwork">
+								<img src="img/market/tick.png" alt="Галочка">
+								<p>Опыт работы</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="market-women">Наша дружная команда профессионалов своего дела</div>
+			<div class="row">
+				<div class="col-lg-4 col-12">
+					<div class="market-block">
+						<img src="img/market/women-icon1.png" alt="Женщина">
+						<div class="market-block__text">
+							<p class="market-block__title">Светлана Бедрицкая</p>
+							<p class="market-block__subtitle">Руководитель "Школы<br>вожатского мастерства"</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-12">
+					<div class="market-block">
+						<img src="img/market/women-icon2.png" alt="Женщина">
+						<div class="market-block__text">
+							<p class="market-block__title">Светлана Бедрицкая</p>
+							<p class="market-block__subtitle">Руководитель "Школы<br>вожатского мастерства"</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-12">
+					<div class="market-block">
+						<img src="img/market/women-icon3.png" alt="Женщина">
+						<div class="market-block__text">
+							<p class="market-block__title">Светлана Бедрицкая</p>
+							<p class="market-block__subtitle">Руководитель "Школы<br>вожатского мастерства"</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- row -->
+		</div>
+		<!-- container -->
+	</div>
+	<!-- market -->
+	<div class="safeny">
+		<div class="safeny-title">Корпоративная школа профессиональных вожатых - гарантия безопасности Ваших детей</div>
+		<div class="safeny-subtitle">Каждый вожатый проходит дополнительное обучение в нашей школе - курс из 36 занятий по 2 часа</div>
+		<div class="safeny-training">4 этапа обучения:</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3">
+					<div class="safeny-block">
+						<div class="safeny-block__step">1 этап</div>
+						<div class="safeny-block__img"><img src="img/safeny/learning.png" alt="Учительница"></div>
+						<div class="safeny-block__title">Теоретическая часть</div>
+						<div class="safeny-block__desc">Возрастная физиология<br>Оказание первой помощи<br>Правила поощрения и наказания<br>Стандартные и нестандартные<br>ситуации</div>
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<div class="safeny-block">
+						<div class="safeny-block__step">2 этап</div>
+						<div class="safeny-block__img"><img src="img/safeny/dancer.png" alt="Танцовщица"></div>
+						<div class="safeny-block__title">Анимационное обучение</div>
+						<div class="safeny-block__desc">Знакомства<br>Игры, квесты, тренинги<br>Адаптация детей</div>
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<div class="safeny-block">
+						<div class="safeny-block__step">3 этап</div>
+						<div class="safeny-block__img"><img src="img/safeny/kneecap.png" alt="Наколеник"></div>
+						<div class="safeny-block__title">Практическое обучение</div>
+						<div class="safeny-block__desc">Оказание первой помощи<br>Моделирование ситуаций и пути<br>их разрешения</div>
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<div class="safeny-block">
+						<div class="safeny-block__step">4 этап</div>
+						<div class="safeny-block__img"><img src="img/safeny/exam.png" alt="Экзамен"></div>
+						<div class="safeny-block__title">Экзамен</div>
+						<div class="safeny-block__desc">3 вопроса: теория, анимация,<br>практическая задача<br>Выдача сертификата вожатого</div>
+					</div>
+				</div>
+			</div>
+			<!-- row -->
+		</div>
+		<!-- container -->
+		<div class="safeny-slider">
+			<div class="safeny-slider__block"><img src="img/safeny/slider-1.jpg" alt="Лагерь"></div>
+			<div class="safeny-slider__block"><img src="img/safeny/slider-2.jpg" alt="Лагерь"></div>
+			<div class="safeny-slider__block"><img src="img/safeny/slider-3.jpg" alt="Лагерь"></div>
+			<div class="safeny-slider__block"><img src="img/safeny/slider-4.jpg" alt="Лагерь"></div>
+			<div class="safeny-slider__block"><img src="img/safeny/slider-5.jpg" alt="Лагерь"></div>
+			<div class="safeny-slider__block"><img src="img/safeny/slider-6.jpg" alt="Лагерь"></div>
+		</div>
+	</div>
+	<!-- safeny -->
+	<div class="rest">
+		<div class="rest-title">5 шагов к счастливому отдыху Вашего ребенка</div>
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-4">
+					<div class="rest-block rest-blockright">
+						<div class="rest-block__img"><img src="img/rest/writing.png" alt="Заявка"></div>
+						<div class="rest-block__desc">Вы оставляете заявку на сайте</div>
+						<div class="rest-block__link"><p>Оставить заявку</p></div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="rest-block rest-blockright">
+						<div class="rest-block__img"><img src="img/rest/assistant.png" alt="Ассистент"></div>
+						<div class="rest-block__desc">Мы связываемся с Вами<br>по телефону</div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="rest-block">
+						<div class="rest-block__img"><img src="img/rest/clipboard.png" alt="Бронь"></div>
+						<div class="rest-block__desc">Подбираем и бронируем подходящую путевку</div>
+					</div>
+				</div>
+			</div>
+			<!-- row -->
+			<div class="row justify-content-center">
+				<div class="col-lg-4">
+					<div class="rest-block rest-blockright">
+						<div class="rest-block__img"><img src="img/rest/document.png" alt="Документ"></div>
+						<div class="rest-block__desc">Вы получаете документы у нас<br>в офисе или по почте</div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="rest-block rest-blockright">
+						<div class="rest-block__img"><img src="img/rest/team.png" alt="Команда"></div>
+						<div class="rest-block__desc">Проводим организационное<br>собрание с вожатыми и<br>родителями</div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="rest-block">
+						<div class="rest-block__img"><img src="img/rest/girl.png" alt="Девочка"></div>
+						<div class="rest-block__desc">Ваш ребенок<br>на незабываемом отдыхе</div>
+					</div>
+				</div>
+			</div>
+			<!-- row -->
+		</div>
+		<!-- container -->
+	</div>
+	<!-- rest -->
+	<div class="license">
+		<div class="license-title">Мы имеем все необходимые лицензии и входим в Единый Федеральный реестр туроператоров РФ под номером: ВНТ- 016164</div>
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-3">
+					<div class="license-img"><img src="img/license/license.jpg" alt="Лицензия"></div>
+					<div class="license-desc">Лицензия туроператора</div>
+				</div>
+				<div class="col-lg-3">
+					<div class="license-img"><img src="img/license/license.jpg" alt="Лицензия"></div>
+					<div class="license-desc">Ассоциация туроператоров</div>
+				</div>
+				<div class="col-lg-3">
+					<div class="license-img"><img src="img/license/license.jpg" alt="Лицензия"></div>
+					<div class="license-desc">Свидетельство о регистрации<br>юридического лица</div>
+				</div>
+			</div>
+			<!-- row -->
+		</div>
+		<!-- container -->
+	</div>
+	<!-- license -->
+	<div class="awords">
+		<div class="awords-title">За 11 лет успешной работы<br>мы получили множество наград и отзывов</div>
+		<div class="awords-subtitle">Награды и благодарности федерального уровня</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="awords-slider">
+						<img src="img/awords/awords.jpg" alt="Награда" class="awords-slider__img">
+						<img src="img/awords/awords.jpg" alt="Награда" class="awords-slider__img">
+						<img src="img/awords/awords.jpg" alt="Награда" class="awords-slider__img">
+						<img src="img/awords/awords.jpg" alt="Награда" class="awords-slider__img">
+						<img src="img/awords/awords.jpg" alt="Награда" class="awords-slider__img">
+						<img src="img/awords/awords.jpg" alt="Награда" class="awords-slider__img">
+					</div>
+				</div>
+				</div>
+				<div class="awords-subtitle">Благодарности от родителей</div>
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="awords-slider">
+							<img src="img/awords/awords.jpg" alt="Награда" class="awords-slider__img">
+							<img src="img/awords/awords.jpg" alt="Награда" class="awords-slider__img">
+							<img src="img/awords/awords.jpg" alt="Награда" class="awords-slider__img">
+							<img src="img/awords/awords.jpg" alt="Награда" class="awords-slider__img">
+							<img src="img/awords/awords.jpg" alt="Награда" class="awords-slider__img">
+							<img src="img/awords/awords.jpg" alt="Награда" class="awords-slider__img">
+						</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="footer">
+		<iframe class="footer-map"
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d857.8081368310488!2d40.534710976822176!3d64.53252899671159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4418342ba874cdfb%3A0x3a3f8b21f92b1c6f!2z0L_RgNC-0YHQvy4g0KfRg9C80LHQsNGA0L7QstCwLdCb0YPRh9C40L3RgdC60L7Qs9C-LCAzLCDQkNGA0YXQsNC90LPQtdC70YzRgdC6LCDQkNGA0YXQsNC90LPQtdC70YzRgdC60LDRjyDQvtCx0LsuLCDQoNC-0YHRgdC40Y8sIDE2MzA0Ng!5e0!3m2!1sru!2skz!4v1607435436089!5m2!1sru!2skz"
+				frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+		</iframe>
+		<div class="footer-block hidden-mobile">
+			<div class="footer-title">Вы всегда можете получить<br>полную информацию по путевкам<br>для детского отдыха в нашем
+				офисе</div>
+			<div class="footer-address">г. Архангельск<br>пр. Чумбарова-Лучинского, д. 39, офис 28</div>
+			<div class="footer-mode">
+				<p class="footer-mode__title">Режим работы:</p>
+				<p class="footer-mode__text">Пн- Пт с 10:00 до 19:00<br>Сб 11-16:00, Вс - выходной</p>
+			</div>
+			<div class="footer-contact">
+				<p class="footer-contact__title">Контакты:</p>
+				<p class="footer-contact__text">+7 (8182) 20-80-10<br>+7 (960) 002 80 10</p>
+			</div>
+			<div class="footer-mail">
+				<p class="footer-mail__text">Если возникли вопросы, вы можете<br>написать нам на электронную почту</p>
+				<div class="footer-mail__gmail"><a href="mailto:7knt@mail.ru">7knt@mail.ru</a></div>
+			</div>
+		</div>
+	</footer>
+	<!-- footer -->
+	<div class="popup popup-enter">
+		<div class="popup-before"></div>
+		<div class="popup-wrap">
+			<div class="popup-header">Оставить заявку</div>
+			<form class="popup-form" action="mailer/smart1.php" method="POST">
+				<div class="popup-input">
+					<input type="text" name="user_name" placeholder="Ваше имя">
+					<img src="img/callback/avatar.png" alt="Аватар">
+				</div>
+				<div class="popup-input">
+					<input type="text" name="user_phone" class="mask" placeholder="Ваш телефон">
+					<img src="img/callback/phone_input.png" alt="Телефон">
+				</div>
+				<button class="popup-btn">Отправить</button>
+			</form>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
+	<script src="js/style.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="slick/slick.min.js"></script>
+</body>
+</html>
